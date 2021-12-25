@@ -5,7 +5,7 @@ import { red } from '@mui/material/colors';
 export const light = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: '#1FC7D4',
     },
     secondary: {
       main: '#19857b',
@@ -19,6 +19,6 @@ export const light = createTheme({
 // A dark theme for this app
 export const dark = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'dark'
   },
 });

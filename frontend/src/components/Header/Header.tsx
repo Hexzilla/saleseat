@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AppBar, Button, Toolbar, IconButton } from "@mui/material";
+import ThemeSwitch from "../ThemeSwitch";
+import { useThemeManager } from "../../state/user/hooks";
 import "./style.css";
 
 export default function Header() {
+  const [isDark, toggleTheme] = useThemeManager();
+  console.log('isDark', isDark)
+
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" color="secondary" style={{ padding: "0 20px" }}>
       <Toolbar disableGutters={true} className="toolbarRoot">
         <IconButton
           color="inherit"
@@ -34,7 +39,8 @@ export default function Header() {
           <Link to="/login" className="menuItem">
             Login
           </Link>
-          <Button color="primary" variant="contained" className="connectButton">
+          <ThemeSwitch checked={isDark} onChange={toggleTheme}></ThemeSwitch>
+          <Button variant="contained" className="connectButton">
             Connect Wallet
           </Button>
         </div>
