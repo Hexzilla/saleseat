@@ -11,14 +11,14 @@ import './App.css';
 
 function App() {
   return (
-    <MainLayout>
-      <Router>
-        <Switch>
-          <Route path="/help" component={Help} />
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </Router>
-    </MainLayout>
+    <Router>
+      <Switch>
+        <MainLayout>
+          <Route exact path="/"><Home/></Route>
+          <Route path="/help"><Help/></Route>
+        </MainLayout>
+    </Switch>
+  </Router>
   );
 }
 
