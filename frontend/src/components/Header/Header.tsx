@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
-import Button from "@mui/material/Button";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import './style.css';
+import { AppBar, Button, Toolbar, IconButton } from "@mui/material";
+import "./style.css";
 
 export default function Header({ handleToggleDrawer }) {
   return (
@@ -15,15 +12,29 @@ export default function Header({ handleToggleDrawer }) {
           aria-label="Open drawer"
           onClick={handleToggleDrawer}
           className="menuButton"
-        >
-        </IconButton>
+        ></IconButton>
         <div className="menubar">
-          <Link to="/" className="menuItem">Home</Link>
-          <Link to="/help" className="menuItem">How it works</Link>
-          <Link to="/buyers" className="menuItem">Buyers</Link>
-          <Link to="/faq" className="menuItem">FAQ</Link>
-          <Link to="/news" className="menuItem">News</Link>
-          <Link to="/contact" className="menuItem">Contact</Link>
+          <Link to="/" className="menuItem">
+            Home
+          </Link>
+          <Link to="/help" className="menuItem">
+            How it works
+          </Link>
+          <Link to="/buyers" className="menuItem">
+            Buyers
+          </Link>
+          <Link to="/faq" className="menuItem">
+            FAQ
+          </Link>
+          <Link to="/news" className="menuItem">
+            News
+          </Link>
+          <Link to="/contact" className="menuItem">
+            Contact
+          </Link>
+          <Link to="/login" className="menuItem">
+            Login
+          </Link>
           <Button color="primary" variant="contained" className="connectButton">
             Connect Wallet
           </Button>
@@ -31,4 +42,4 @@ export default function Header({ handleToggleDrawer }) {
       </Toolbar>
     </AppBar>
   );
-};
+}
