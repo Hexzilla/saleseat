@@ -1,36 +1,17 @@
-import { Fragment, useState } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import classNames from "classnames";
-
+import Toolbar from "@mui/material/Toolbar";
+import Container from "@mui/material/Container";
 import Header from "../components/Header/Header";
 
-const drawerWidth = 240;
-
-const styles = (theme: any) => ({
-  root: {
-    display: "flex"
-  },
-});
-
-const MainLayout = (props: any) => {
-  const [open, setOpen] = useState(false)
-  
+export default function MainLayout({ children }){
   return (
-    <Fragment>
-      <div className={props.classes.root}>
-        <Header
-          handleToggleDrawer={() => setOpen(true)}
-        />
-        <main
-          className={classNames(props.classes.content, {
-            [props.classes.contentShift]: open
-          })}
-        >
-          {props.children}
-        </main>
-      </div>
-    </Fragment>
+    <div className="root">
+      <Header
+        handleToggleDrawer={() => console.log('')}
+      />
+      <Toolbar />
+      <Container>
+        {children}
+      </Container>
+    </div>
   )
 }
-
-export default withStyles(styles)(MainLayout);

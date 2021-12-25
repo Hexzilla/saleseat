@@ -1,0 +1,23 @@
+.toolbarRoot {
+  padding-right: 24px;
+  justify-content: space-between;
+}
+.menuButton {
+  margin-left: 12px;
+  margin-right: 36px;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+}
+
+.menuItem {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.0rem;
+}
+
+.connectButton {
+  margin-left: 2rem;
+}

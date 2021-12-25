@@ -1,19 +1,43 @@
 import React from "react";
-import { withStyles } from "@material-ui/core";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Typography from "@mui/material/Typography";
 
-const styles = () => ({
-  toolbarRoot: {
-    paddingRight: 24,
-    justifyContent: 'space-between'
-  },
-});
-
-const Help = ({ classes }) => {
+export default function Help() {
   return (
-    <div>
-      Help Page
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
+      <Card>
+        <CardContent>
+          <Typography variant="h5">
+            Help
+          </Typography>
+          <Typography
+            align="center"
+            variant="subtitle1"
+          >
+            Counter Help
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button color="primary" variant="contained">
+            Increment
+          </Button>
+          <Button
+            color="secondary"
+            variant="contained"
+          >
+            Decrement Help
+          </Button>
+        </CardActions>
+      </Card>
     </div>
   );
 };
-
-export default withStyles(styles)(Help);
