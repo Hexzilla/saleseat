@@ -4,13 +4,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import './index.css';
 import App from './App';
-import theme from './theme';
+import { dark } from './theme';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={dark}>
         <CssBaseline />
         <App />
       </ThemeProvider>

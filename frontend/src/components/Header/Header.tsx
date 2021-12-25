@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { AppBar, Button, Toolbar, IconButton } from "@mui/material";
 import "./style.css";
 
-export default function Header({ handleToggleDrawer }) {
+export default function Header() {
   return (
     <AppBar position="fixed">
       <Toolbar disableGutters={true} className="toolbarRoot">
         <IconButton
           color="inherit"
           aria-label="Open drawer"
-          onClick={handleToggleDrawer}
           className="menuButton"
         ></IconButton>
         <div className="menubar">
